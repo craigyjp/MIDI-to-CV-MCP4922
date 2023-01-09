@@ -16,9 +16,17 @@
 #include <MIDI.h>
 #include <SPI.h>
 #include <MCP4922.h>
-MCP4922 DAC1(11,13,10,9); 
-MCP4922 DAC2(11,13,8,9); 
-MCP4922 DAC3(11,13,7,9);  // (MOSI,SCK,CS,LDAC) define Connections for MEGA_board, 
+
+#define DAC_MOSI  11
+#define DAC_SCK  13
+#define DAC_LDAC  9
+#define DAC_CS1  10
+#define DAC_CS2  8
+#define DAC_CS3  7
+
+MCP4922 DAC1(DAC_MOSI,DAC_SCK,DAC_CS1,DAC_LDAC); 
+MCP4922 DAC2(DAC_MOSI,DAC_SCK,DAC_CS2,DAC_LDAC); 
+MCP4922 DAC3(DAC_MOSI,DAC_SCK,DAC_CS3,DAC_LDAC);  // (MOSI,SCK,CS,LDAC) define Connections for MEGA_board, 
 
 // Note priority is set by pins A0 and A2
 // Highest note priority: A0 and A2 high (open)
