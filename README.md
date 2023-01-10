@@ -17,4 +17,6 @@ This repository contains the code and schematic for a DIY MIDI to CV converter. 
 - Clock output (1 clock per quarter note, 20 msec 5V pulses)
 - Read the MIDI channel from 4 toggle switches, can be replaced with a HEX rotary switch or bank of 4 dip switches.
 
+- Really needs a 4096mV reference for the AREF pins and recalibrating.
+
 When building and testing the Elkyam MIDI to CV I noticed the voltage was out and it seems he subtracts 21 from the note, I removed this and fixed the bottom note failure. I also added 4 toggle switches so that I could change the channel from OMNI to 1-15 (not 16 unfortunately)
